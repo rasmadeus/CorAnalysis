@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>res/icon.ico</file>
+        <file>res/load.png</file>
+        <file>res/go.png</file>
+        <file>res/options.png</file>
+    </qresource>
+</RCC>
