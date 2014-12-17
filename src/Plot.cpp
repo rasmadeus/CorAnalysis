@@ -17,17 +17,19 @@ static void setLookAndFeelFrame(QwtPlot* plot)
 
 static void createCanvas(QwtPlot* plot)
 {
-    plot->canvas()->setLineWidth(1);
-    plot->canvas()->setFrameStyle(QFrame::Box | QFrame::Plain);
-    plot->canvas()->setBorderRadius(10);
-    plot->canvas()->setPalette(QPalette(Qt::white));
+    QwtPlotCanvas* canvas = new QwtPlotCanvas();
+    canvas->setLineWidth(1);
+    canvas->setFrameStyle(QFrame::Box | QFrame::Plain);
+    canvas->setBorderRadius(10);
+    canvas->setPalette(QPalette(Qt::white));
+    plot->setCanvas(canvas);
 }
 
 static void createGrid(QwtPlot* plot)
 {
     QwtPlotGrid* grid = new QwtPlotGrid();
-    grid->setMajPen(QPen(Qt::gray, 0, Qt::DotLine));
-    grid->setMinPen(QPen(Qt::gray, 0, Qt::DotLine));
+    grid->setMajorPen(QPen(Qt::gray, 0, Qt::DotLine));
+    grid->setMinorPen(QPen(Qt::gray, 0, Qt::DotLine));
     grid->attach(plot);
 }
 

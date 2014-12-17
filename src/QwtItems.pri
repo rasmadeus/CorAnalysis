@@ -1,4 +1,4 @@
-include(c:/Dev/Qwt-6.0.1/features/qwt.prf)
+include(c:\Dev\Qt\Qt5.2.1\Qwt-6.1.0\features\qwt.prf)
 
 HEADERS += \
     Plot.h \
